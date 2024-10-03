@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Document List</title>
+</head>
+<body>
+<h1>Spring AI Document List</h1>
+<ul>
+    <li th:each="doc : ${documents}">
+        <strong>ID:</strong> <span th:text="${doc.id}"></span><br>
+        <strong>Title:</strong> <span th:text="${doc.metadata['title']}"></span><br>
+        <strong>Content:</strong> <span th:text="${doc.metadata['content']}"></span>
+    </li>
+</ul>
+</body>
+</html>
