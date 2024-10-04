@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Document List</title>
+<script>
+    function send(){
+      let msg=document.getElementById("msg").value;
+        fetch("http://localhost:8081/chat-gpt-v2?msg="+msg)
+        .then(response=>{
+          return response.text();
+        })
+        .then(data=>{
+          console.log(data);
+          document.getElementById("gpt").innerHTML=data;
+        })
+        .catch(error=>{
+          console.log(error);
+        });
+    }
+</script>
+</head>
+<body>
+<h1>Spring AI Document List</h1>
+    message : <input type="text" name="msg" id="msg"/>
+    <button type="button" onclick="send()">GPT SEND</button>
+    <hr/>
+    <div id="gpt">여기에 출력하세요.</div>
+</body>
+</html>

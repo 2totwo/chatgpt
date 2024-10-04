@@ -24,7 +24,7 @@ spring:
     vectorstore:
     # PostgreSQL의 pgvector 설정 제거
     openai:
-      api-key: 
+      api-key: # 내 api key 넣기!
       chat:
         options:
           model: gpt-4  # 사용할 모델 지정
