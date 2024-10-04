@@ -19,3 +19,12 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: 'true'
     open-in-view: false
+
+  ai:
+    vectorstore:
+    # PostgreSQL의 pgvector 설정 제거
+    openai:
+      api-key: 
+      chat:
+        options:
+          model: gpt-4  # 사용할 모델 지정
